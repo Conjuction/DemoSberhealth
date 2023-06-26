@@ -44,7 +44,7 @@ public class DemoSberHealth extends TestBase {
             "Половых органов, Половых органов",
             "Мягких тканей, Мягких тканей"
     })
-    @ParameterizedTest(name = "Проверка перехода по страницам после выбора исследования: {0}")
+    @ParameterizedTest(name = "Проверка перехода на страницу после выбора исследования: {0}")
     void checkTitleDiagnostics(String study,
                      String diagnostics) {
         $(".the-header__links").find(byText("Диагностика")).click();
@@ -62,7 +62,7 @@ public class DemoSberHealth extends TestBase {
             "Справки", "Стоматология", "Травматология-ортопедия", "Урология", "Физиотерапия", "Флебология", "Эндокринология"}
     )
 
-    @ParameterizedTest(name = "Проверка перехода по страницам после выбора услуги: {0}")
+    @ParameterizedTest(name = "Проверка перехода на страницу после выбора услуги: {0}")
     void checkTitleServices (String service) {
         $(".the-header__links").find(byText("Услуги")).click();
         $(".ServiceList__title_4s0e").shouldHave(text("Медицинские услуги в Москве"));
